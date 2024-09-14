@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from 'react';
 import styles from '@/styles/evaluationCard.module.css';
 
@@ -13,49 +13,56 @@ const EvaluationCard: React.FC<EvaluationCardProps> = ({ imageUrl, description, 
     const [selectedCard, setSelectedCard] = useState<string | null>(null);
     const [stars, setStars] = useState(0);
 
-    
+
     const handleCardSelection = (color: string) => {
         setSelectedCard(color);
     };
 
-    
+
     const handleStarClick = (star: number) => {
         setStars(star);
     };
 
     return (
         <div className={styles.card}>
-            <img src={imageUrl} alt="User" className={styles.image} />
+            <Image
+                src={imageUrl}
+                alt="User"
+                className={styles.image}
+                width={200} 
+                height={200} 
+            />
+
             <h3>{userName}</h3>
             <p>{description}</p>
 
             {/* Cartões de cor */}
             <div className={styles.cardSelection}>
-                <button 
-                    className={`${styles.cardButton} ${styles.green}`} 
+                <button
+                    className={`${styles.cardButton} ${styles.green}`}
                     onClick={() => handleCardSelection('green')}
                 >
-                   green
+                    green
                 </button>
-                <button 
-                    className={`${styles.cardButton} ${styles.yellow}`} 
+                <button
+                    className={`${styles.cardButton} ${styles.yellow}`}
                     onClick={() => handleCardSelection('yellow')}
                 >
                     yellow
                 </button>
-                <button 
-                    className={`${styles.cardButton} ${styles.red}`} 
+                <button
+                    className={`${styles.cardButton} ${styles.red}`}
                     onClick={() => handleCardSelection('red')}
                 >
                     red
                 </button>
             </div>
 
-          
+
             <div className={styles.starRating}>
                 {[1, 2, 3, 4, 5].map((star) => (
-                    <span 
-                        key={star} 
+                    <span
+                        key={star}
                         className={`${styles.star} ${star <= stars ? styles.filledStar : ''}`}
                         onClick={() => handleStarClick(star)}
                     >
@@ -64,7 +71,7 @@ const EvaluationCard: React.FC<EvaluationCardProps> = ({ imageUrl, description, 
                 ))}
             </div>
 
-           
+
             {selectedCard && <p>Cartão selecionado: {selectedCard}</p>}
         </div>
     );
