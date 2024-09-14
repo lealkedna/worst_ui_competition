@@ -1,0 +1,39 @@
+
+.mainSection {
+    padding-bottom: 40px;
+    background-color: #f0f0f0;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.mainSection h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.mainSection p {
+    font-size: 1.2em;
+    color: #333;
+} 
+
+
+.descrition {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+  }
+  
+  
+  .conteudo {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }

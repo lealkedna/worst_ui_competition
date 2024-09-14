@@ -1,0 +1,24 @@
+/* src/styles/Header.module.css */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #E0E0E0;
+}
+
+.navList {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navList a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+.upsideDown {
+    transform: rotate(180deg);
+    display: inline-block; 
+}

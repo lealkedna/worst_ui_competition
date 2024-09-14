@@ -1,0 +1,41 @@
+
+.footer {
+    background: linear-gradient(135deg, #f8b400, #f76c6c);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.decorativeBar {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #fff, #ffdd57, #f76c6c, #fff);
+    margin: 10px 0;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.motivational {
+    font-size: 18px;
+}
+
+.icons {
+    display: flex;
+    gap: 15px;
+    font-size: 36px;
+}
+
+.star, .trophy, .medal {
+    transition: transform 0.3s;
+}
+
+.star:hover, .trophy:hover, .medal:hover {
+    transform: scale(1.2);
+}
+

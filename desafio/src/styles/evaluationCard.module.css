@@ -1,0 +1,69 @@
+/* src/styles/EvaluationCard.module.css */
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.card h3{
+    text-align: center;
+}
+
+.image {
+    /* width: 100%;
+    height: auto;
+    border-radius: 50%; */
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 3px solid darkorange; 
+}
+
+.cardSelection {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    gap: 5px
+}
+
+.cardButton {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+.green {
+    background-color: #28a745;
+}
+
+.yellow {
+    background-color: #ffc107;
+}
+
+.red {
+    background-color: #dc3545;
+}
+
+.starRating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.filledStar {
+    color: #ffcc00;
+}

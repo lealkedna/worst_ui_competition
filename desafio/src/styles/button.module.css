@@ -1,0 +1,22 @@
+
+.button {
+    background-color: darkorange; 
+    color: #fff;
+    padding: 20px 40px ;
+    margin-top: 25px;
+    border: none;
+    border-radius: 8px; 
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: orange; 
+}
+
+.button:active {
+    background-color: #fff;
+    border: 1px solid darkorange;
+}
