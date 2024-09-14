@@ -1,5 +1,5 @@
 "use client";
-import Image from "next/image";
+
 import { useState } from 'react';
 import styles from '@/styles/evaluationCard.module.css';
 
@@ -25,7 +25,7 @@ const EvaluationCard: React.FC<EvaluationCardProps> = ({ imageUrl, description, 
 
     return (
         <div className={styles.card}>
-            <Image src={imageUrl} alt="User" className={styles.image} />
+            <img src={imageUrl} alt="User" className={styles.image} />
             <h3>{userName}</h3>
             <p>{description}</p>
 
