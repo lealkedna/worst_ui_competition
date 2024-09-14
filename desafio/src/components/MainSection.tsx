@@ -1,4 +1,4 @@
-// src/components/MainSection.tsx
+
 import styles from '@/styles/mainSection.module.css';
 import Button from "@/components/Button";
 import Image from "next/image";

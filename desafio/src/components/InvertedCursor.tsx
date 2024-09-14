@@ -7,7 +7,7 @@ const InvertedCursor: React.FC = () => {
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
-      // Calcula a posição invertida do cursor
+      
       const invertedX = window.innerWidth - event.clientX;
       const invertedY = window.innerHeight - event.clientY;
       setCursorPosition({ x: invertedX, y: invertedY });
@@ -32,7 +32,7 @@ const InvertedCursor: React.FC = () => {
           height: '20px',
           backgroundColor: 'orange',
           borderRadius: '50%',
-          pointerEvents: 'none', // Permite que os cliques passem para os elementos abaixo
+          pointerEvents: 'none', 
         }}
       />
     </>

@@ -1,6 +1,6 @@
-// src/components/Header.tsx
+
 import styles from "@/styles/header.module.css"
-// import { url } from "inspector";
+
 import Image from "next/image";
 
 const Header = () => {

@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState } from 'react';
 import styles from '@/styles/evaluationCard.module.css';
 
@@ -13,19 +13,19 @@ const EvaluationCard: React.FC<EvaluationCardProps> = ({ imageUrl, description, 
     const [selectedCard, setSelectedCard] = useState<string | null>(null);
     const [stars, setStars] = useState(0);
 
-    // Função para manipular a seleção de cor do cartão
+    
     const handleCardSelection = (color: string) => {
         setSelectedCard(color);
     };
 
-    // Função para manipular a avaliação por estrelas
+    
     const handleStarClick = (star: number) => {
         setStars(star);
     };
 
     return (
         <div className={styles.card}>
-            <img src={imageUrl} alt="User" className={styles.image} />
+            <Image src={imageUrl} alt="User" className={styles.image} />
             <h3>{userName}</h3>
             <p>{description}</p>
 
@@ -51,7 +51,7 @@ const EvaluationCard: React.FC<EvaluationCardProps> = ({ imageUrl, description, 
                 </button>
             </div>
 
-            {/* Avaliação por estrelas */}
+          
             <div className={styles.starRating}>
                 {[1, 2, 3, 4, 5].map((star) => (
                     <span 
@@ -64,7 +64,7 @@ const EvaluationCard: React.FC<EvaluationCardProps> = ({ imageUrl, description, 
                 ))}
             </div>
 
-            {/* Exibe a cor selecionada */}
+           
             {selectedCard && <p>Cartão selecionado: {selectedCard}</p>}
         </div>
     );
